@@ -1,0 +1,70 @@
+// Typography
+
+@include title-size('≥');
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+  font-family: $headings-font-family;
+  color: $headings-color;
+  font-weight: bold;
+  margin: 0 0 10px;
+
+  @include media('≥tablet') {
+    margin-bottom: 20px;
+  }
+}
+
+
+h1 {
+  font-size: 33px;
+  font-weight: 800;
+  color: $white;
+  letter-spacing: .05em;
+
+  @include media('≥tablet') {
+    font-size: 40px;
+  }
+
+  @include media('≥1366px') {
+    font-size: $h1-fontsize;
+  }
+}
+
+h2 {
+  font-size: $h2-fontsize;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: .05em;
+  color: $white;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: $text-decoration;
+
+  &:hover,
+  &:focus {
+    color: $base-link-hover-color;
+    text-decoration: $text-decoration-hover;
+  }
+}
+
+a[href*="mailto:"] {
+  word-wrap: break-word;
+}

@@ -1,0 +1,78 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main(role="main")
+			section.section-hero
+				.hero-slider.j-hero-slider
+					.slider-item.bg-image(style='background-image: url("images/hero-img-01.jpg");')
+						.inner
+							.text-holder
+								h1.title Elevate Your Experience
+								.text
+									p Join StockForex.COM Webinars with Our Chief Analyst Mr. Christopher Glenn
+					.slider-item.bg-image(style='background-image: url("images/hero-img-02.jpg");')
+						.inner
+							.text-holder
+								h1.title Elevate Your Experience
+								.text
+									p Join StockForex.COM Webinars with Our Chief Analyst Mr. Christopher Glenn
+					.slider-item.bg-image(style='background-image: url("images/hero-img-03.jpg");')
+						.inner
+							.text-holder
+								h1.title Elevate Your Experience
+								.text
+									p Join StockForex.COM Webinars with Our Chief Analyst Mr. Christopher Glenn
+			section.section-cards(style='background-image: url("images/education-bg.png");')
+				.container
+					h2.title Education
+					.df-row
+						.column-sl-6.column-l-3
+							+card({
+									cardIcon: 'card-01',
+									cardTitle: 'Daily news',
+									cardText: 'Daily analsit video news in the CFD world',
+									cardBtn: 'Read more'
+								})
+						.column-sl-6.column-l-3
+							+card({
+									cardIcon: 'card-02',
+									cardTitle: 'Trading academy',
+									cardText: 'Your own private trading school',
+									cardBtn: 'Read more'
+								})
+						.column-sl-6.column-l-3
+							+card({
+									cardIcon: 'card-03',
+									cardTitle: 'Video tutorials',
+									cardText: 'We offer you a variety of different and thorough tutorials',
+									cardBtn: 'Read more'
+								})
+						.column-sl-6.column-l-3
+							+card({
+									cardIcon: 'card-04',
+									cardTitle: 'CFD glossary',
+									cardText: 'The alphabetical list of CFD terms with the definitions for those terms.',
+									cardBtn: 'Read more'
+								})
+			section.section-contact-us
+				.container
+					h2.title Contact us
+					.form-holder
+						span.form-title Feel free to choose your preferred contact method: 
+						form.form.j-contact-form(action="/" role='form')
+							.df-row
+								.column-m-6
+									.input-field.name
+										input(type="text" placeholder='Name' aria-label='Name' data-required="true" required)
+									.input-field.last-name
+										input(type="text" placeholder='Last Name' aria-label='Last Name' data-required="true" required)
+									.input-field.phone
+										input.phone-mask(type="text" placeholder='Telephone' aria-label='Telephone' data-required="true" required)
+								.column-m-6
+									.input-field.subject
+										input(type="text" placeholder='Subject' aria-label='Subject' data-required="true" required)
+									.input-field
+										textarea(name="textarea", aria-label='textarea')
+								.btn-wrap
+									button(type='submit' aria-label='submit button').btn.btn-otline-dark Send
+		include pug/common/_footer

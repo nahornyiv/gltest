@@ -1,0 +1,19 @@
+//- +card({
+//- 		cardIcon: '',
+//- 		cardTitle: '',
+//- 		cardText: '',
+//- 		cardBtn: ''
+//- 	})
+mixin card(obj)
+	.card
+		.card-content
+			if (obj.cardIcon)
+				.card-image
+					.icon-holder: i(class='icon-'+obj.cardIcon)
+			if (obj.cardTitle)
+				span.card-title= obj.cardTitle
+			if (obj.cardText)
+				.card-text
+					p= obj.cardText
+		if (obj.cardBtn)
+			a(href='#').btn.btn-otline-default= obj.cardBtn

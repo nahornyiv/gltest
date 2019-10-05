@@ -1,0 +1,80 @@
+.btn {
+  @include animate(background color border-color);
+
+  display: inline-block;
+  vertical-align: top;
+  max-width: 144px;
+  font-family: $base-font;
+  box-shadow: none;
+  height: auto;
+  font-weight: 700;
+  line-height: 1.5;
+	padding: $btn-padding;
+
+  &:hover {
+    box-shadow: none;
+    color: $white;
+  }
+
+  &.btn-warning {
+  	min-width: 144px;
+    background-color: $orange;
+    color: $black;
+    border: 2px solid $orange;
+  }
+
+  &.btn-otline {
+  	&-default {
+  		background-color: transparent;
+  		color: $white;
+  		border: 2px solid;
+  		min-width: 144px;
+
+  		&:hover {
+  			color: $orange;
+  		}
+  	}
+
+  	&-warning {
+  		background-color: transparent;
+  		color: $orange;
+			border: 2px solid;
+			min-width: 144px;
+
+			&:hover {
+				color: $white;
+				background-color: #1D2A38;
+			}
+  	}
+
+  	&-dark {
+  		background-color: transparent;
+  		color: $black;
+			border: 2px solid;
+			min-width: 144px;
+
+			&:hover {
+				color: $white;
+				background-color: #D68E30;
+			}
+  	}
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    +.btn {
+
+    	@include media('≥tablet') {
+    		margin-left: 23px;
+    	}	
+
+    	@include media('≥desktop') {
+      	margin-left: 15px;
+    	}
+    }
+  }
+}

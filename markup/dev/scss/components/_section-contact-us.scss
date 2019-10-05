@@ -1,0 +1,91 @@
+.section-contact-us {
+	padding-top: 47px;
+	padding-bottom: 70px;
+	background-color: $orange;
+
+	@include media('≥desktop') {
+		padding-top: 36px;
+		padding-bottom: 74px;
+	}
+
+	.title {
+		color: #1C1C1C;
+		letter-spacing: -.01em;
+
+		@include media('≥desktop') {
+			margin-bottom: 8px;
+		}
+	}
+
+	.form-holder {
+		padding-top: 9px;
+		text-align: center;
+
+		.form-title {
+			display: block;
+			letter-spacing: -.01em;
+
+			@include media('≥tablet') {
+				font-size: 15px;
+			}
+		}
+
+		form {
+			padding-top: 42px;
+			max-width: 292px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@include media('≥tablet') {
+				max-width: 827px;
+			}
+
+			@include media('≥desktop') {
+				padding-top: 58px;
+				max-width: 989px;
+			}
+		}
+
+		.df-row {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		[class^='column'] {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.input-field {
+			@include media('≥desktop') {
+    		margin-bottom: 5px;
+			}
+		}
+
+		input[type='text'],
+		input[type='tel']{
+			padding-left: 43px;
+		}
+
+		.btn-wrap {
+			width: 100%;
+    	padding: 0 10px;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 18px;
+
+			@include media('≥tablet') {
+				max-width: 150px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			@include media('≥desktop') {
+				max-width: 224px;
+				margin-top: 26px;
+			}
+		}
+	}
+}

@@ -1,0 +1,168 @@
+.section-cards {
+	padding-top: 42px;
+	padding-bottom: 26px;
+	background-color: $blue;
+
+	@include media('≥tablet') {
+		padding-bottom: 60px;
+	}
+
+	@include media('≥desktop') {
+		padding-top: 86px;
+		padding-bottom: 140px;		
+	}
+
+	.container {
+		max-width: 840px;
+
+		@include media('≥desktop') {
+			max-width: 1522px;
+		}
+	}
+
+	.title {
+		margin-bottom: 52px;
+
+		@include media('≥desktop') {
+			margin-bottom: 63px;
+		}
+	}
+
+	[class^="column-"] {
+		display: flex;
+		width: 100%;
+	}
+
+	.card {
+		@include animate(border background);
+
+		font-family: Rubik;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding-top: 66px;
+		padding-left: 60px;
+		padding-right: 60px;
+		padding-bottom: 25px;
+		padding-top: 25px;
+		color: $white;
+		text-align: center;
+		border: 2px solid transparent;
+		box-shadow: none;
+		margin: 0;
+		border-radius: 0;
+		margin-bottom: 22px;
+
+		@include media('≥phone-xl') {
+			padding: 25px;
+		}
+
+		@include media('≥tablet') {
+			padding: $card-padding;
+			max-width: 290px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&:hover {
+			background: rgba(26, 31, 37, 0.57);
+			border: 2px solid #566371;
+
+			[class^='icon-'] {
+				&:before {
+					color: $orange;
+				}
+			}
+
+			.card-title {
+				color: $orange;
+			}
+
+			.btn {
+				color: $orange;
+			}
+		}
+
+		[class^='icon-'] {
+			&:before {
+				color: $orange;
+
+				@include media('≥tablet') {
+					color: #67717d;					
+				}
+			}
+		}
+
+		.icon-card-01 {
+			font-size: 38px;
+		}
+
+		.icon-card-02 {
+			font-size: 54px;
+		}
+
+		.icon-card-03 {
+			font-size: 44px;
+		}
+
+		.icon-card-04 {
+			font-size: 48px;
+		}
+	}
+
+	[class^='icon-'] {
+		&:before {
+			@include animate(color);		
+		}
+	}
+
+	.card-content {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 46px;
+
+		.card-title {
+			@include animate(color);	
+		
+			display: block;
+			font-weight: 500;
+			font-size: 18px;
+			margin-bottom: 21px;
+			line-height: 1.64;
+			text-align: center;
+		}
+	}
+
+	.card-image {
+		min-height: 54px;
+		text-align: center;
+		margin-bottom: 14px;
+	}
+
+	.card-text {
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 1.38;
+	}
+
+	.btn-wrap {
+		justify-content: center;
+	}
+
+	.btn {
+		font-size: 17px;
+		max-width: 168px;
+		width: 100%;
+		color: $orange;
+		padding: 8px 10px;
+		line-height: 1.4;
+		font-weight: 600;
+		text-transform: none;
+
+		@include media('≥tablet') {
+			color: $white;
+		}
+	}
+}

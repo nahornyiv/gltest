@@ -1,0 +1,47 @@
+header#header(role="banner")
+	.header-main
+		nav.nav-wrapper(role="navigation")
+			.container
+				.inner
+					a.brand-logo(href='#!').hide-on-med-and-down
+						img(src="images/logo.svg", width='190', height='42', alt="image description")
+					a.brand-logo(href='#!').hide-on-large-only
+						img(src="images/logo-white.svg", width='190', height='42', alt="image description")
+					a.sidenav-trigger.white-text(href='#', data-target='mobile-menu')
+						i.material-icons menu
+					.desktop-nav.hide-on-med-and-down
+						ul.menu-list
+							li
+								a(href='#' title='home') home
+							li.active
+								a(href='#' title='EDUCATION') EDUCATION
+							li
+								a(href='#' title='contact') contact
+						.btn-wrap
+							a(href='#').btn.btn-warning  sign up
+							a(href='#').btn.btn-otline-default log in
+		#mobile-menu.sidenav.j-sidenav
+			.brand-holder
+				a.brand-logo(href='#!')
+					img(src="images/logo-white.svg", width='190', height='42', alt="image description")
+				a(href="#").sidenav-close.white-text
+					i.material-icons close
+			.btn-wrap
+				a(href='#').btn.btn-warning sign up
+				a(href='#').btn.btn-otline-default log in
+			ul.menu-list
+				li
+					a(href='#') Education
+				li
+					a(href='#') Accounts
+				li
+					a(href='#') Platforms
+				li
+					a(href='#') Products
+				li.active
+					a(href='#') About us
+				li
+					a(href='#') Legal
+	.header-sub.hide-on-med-and-down
+		.container
+			a(href='#').btn.btn-otline-warning trade now
