@@ -63,9 +63,12 @@
 
 .btn-wrap {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
 
   .btn {
+    margin-bottom: 9px;
+
     +.btn {
 
     	@include media('≥tablet') {

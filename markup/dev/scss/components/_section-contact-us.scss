@@ -72,9 +72,16 @@
     	padding: 0 10px;
 		}
 
-		button {
+		button,
+		input[type='submit'] {
 			width: 100%;
+			max-width: 100%;
 			margin-top: 18px;
+			font-size: 17px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			text-transform: capitalize;
+			line-height: 1.4;
 
 			@include media('≥tablet') {
 				max-width: 150px;
@@ -83,7 +90,7 @@
 			}
 
 			@include media('≥desktop') {
-				max-width: 224px;
+				max-width: 233px;
 				margin-top: 26px;
 			}
 		}
