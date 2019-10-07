@@ -7,7 +7,7 @@ jQuery(function() {
 
 // sidenav init init
 function initSidenav() {
-  $('.j-sidenav').sidenav();
+  jQuery('.j-sidenav').sidenav();
 }
 
 // slick init
